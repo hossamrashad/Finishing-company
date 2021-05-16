@@ -1,0 +1,975 @@
+
+// Start hoverZoomLink
+.css-hover-zoom-scale {
+  overflow: hidden;
+  img {
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
+// End hoverZoomLink
+
+// for wol dir ltr
+.owl-stage-outer {
+  direction: ltr !important;
+}
+
+// fixed menu
+/*
+<!-- Start fixed menu -->
+    <div class="fixed-menu-normal">
+      <i class="fa fa-bars fa-fw fa-2x" aria-hidden="true"></i>
+      <h3 class="h5">1 - الرئيسية</h3>
+      <h3 class="h5">2 - مشاريعنا</h3>
+      <h3 class="h5">3 - المقالات</h3>
+      <h3 class="h5">4 - الالوان</h3>
+      <h3 class="h5">5 - الخريطة</h3>
+      <h3 class="h5">6 - اتصال بنا</h3>
+    </div>
+    <!-- End fixed menu -->
+
+    ****************************
+
+    <!-- Start fixed menu -->
+        <div class="fixed-menu-padding-body">
+          <i class="fa fa-bars fa-fw fa-2x" aria-hidden="true"></i>
+          <h3 class="h5">1 - الرئيسية</h3>
+          <h3 class="h5">2 - مشاريعنا</h3>
+          <h3 class="h5">3 - المقالات</h3>
+          <h3 class="h5">4 - الالوان</h3>
+          <h3 class="h5">5 - الخريطة</h3>
+          <h3 class="h5">6 - اتصال بنا</h3>
+        </div>
+        <!-- End fixed menu -->
+*/
+.fixed-menu-normal,
+.fixed-menu-padding-body {
+  background-color: map-get($colors, 3498db);
+  color: #fff;
+  padding: 10px 10px;
+  position: fixed;
+  right: -150px;
+  top: 0%;
+  height: 1000%;
+  width: 150px;
+  z-index: 9999;
+  border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -ms-border-radius: 10px 0px 0px 10px;
+  -o-border-radius: 10px 0px 0px 10px;
+  .fa-bars {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: map-get($colors, 3498db);
+    border-radius: 10px 0px 0px 10px;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    -ms-border-radius: 10px 0px 0px 10px;
+    -o-border-radius: 10px 0px 0px 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  a {
+    color: map-get($colors, fff);
+    margin: 30px 0px;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+
+// popup
+/*
+<!-- Start popup -->
+    <span class="btn-show-popup" data-popup=".sign-in">تسجيل الدخول</span>
+    <div class="popup sign-in">
+      <div class="inner">
+        <button class="close">close</button>
+      </div>
+    </div>
+    <!-- End popup -->
+*/
+.btn-show-popup {
+  cursor: pointer;
+  position: fixed;
+  left: 0px;
+  top: 18px;
+  display: block;
+  text-align: center;
+  margin-right: 20px;
+  background-color: #fff;
+  width: 135px;
+  padding: 10px;
+  font-weight: bold;
+  color: #928440;
+  @include borderRadius(5px);
+  z-index: 9999;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  //
+  .inner {
+    position: fixed;
+    background-color: map-get($colors, 1);
+    width: 50%;
+    min-height: 300px;
+    @include flexCenter;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    .close {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 2px 8px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      @include borderRadius(5px);
+      cursor: pointer;
+    }
+  }
+}
+
+// map
+.jq-map {
+  width: 100%;
+  min-height: 100px;
+}
+
+// form-1
+
+.parent-form-1 {
+  margin: 0;
+  padding: 0;
+  font-family: $font-cairo;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://placeimg.com/1000/1000/tech");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  .wrapper-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 400px;
+    height: 480px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 50px 30px;
+    @include borderRadius(20px);
+    @include xs-media {
+      height: 350px;
+    }
+
+    .form-img {
+      width: 80px;
+      height: 80px;
+      @include borderRadius(50%);
+      position: absolute;
+      top: -40px;
+      left: calc(50% - 40px);
+      @include xs-media {
+        display: none;
+      }
+    }
+    .h1 {
+      text-align: center;
+      font-size: $font-page + 6;
+      margin: 0;
+      padding: 0px 0px 20px;
+      @include xs-media {
+        font-size: $font-page;
+        padding: 0px 0px 10px;
+      }
+    }
+    label {
+      font-weight: bold;
+      font-size: $font-page + 1;
+      @include xs-media {
+        font-weight: normal;
+        font-size: $font-page - 4 !important;
+      }
+    }
+    input {
+      border: none !important;
+      outline: none !important;
+      border-bottom: 1px solid #fff !important;
+      background: transparent;
+      height: 40px;
+      color: #fff;
+      font-size: $font-page;
+      width: 100%;
+      margin-bottom: 20px;
+      @include xs-media {
+        height: 20px;
+      }
+    }
+    input:focus,
+    input:hover,
+    input:visited,
+    input:active,
+    input:focus-within,
+    input:focus-visible {
+      border: none !important;
+      outline: none !important;
+      border-bottom: 1px solid #fff !important;
+    }
+    ::-webkit-input-placeholder {
+      /* Edge */
+      color: #fff;
+      font-size: $font-page - 2;
+      line-height: 40px;
+      @include xs-media {
+        font-size: $font-page - 5;
+        line-height: 20px;
+      }
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer */
+      color: #fff;
+      font-size: $font-page - 2;
+      line-height: 40px;
+      @include xs-media {
+        font-size: $font-page - 5;
+        line-height: 20px;
+      }
+    }
+
+    ::-moz-placeholder {
+      color: #fff;
+      font-size: $font-page - 2;
+      line-height: 40px;
+      @include xs-media {
+        font-size: $font-page - 5;
+        line-height: 20px;
+      }
+    }
+
+    ::-ms-input-placeholder {
+      color: #fff;
+      font-size: $font-page - 2;
+      line-height: 40px;
+      @include xs-media {
+        font-size: $font-page - 5;
+        line-height: 20px;
+      }
+    }
+
+    ::placeholder {
+      color: #fff;
+      font-size: $font-page - 2;
+      line-height: 40px;
+      @include xs-media {
+        font-size: $font-page - 5;
+        line-height: 20px;
+      }
+    }
+    .btn-submit {
+      width: 50%;
+      margin: 35px auto 0px;
+      @include flexCenter;
+      font-size: $font-page + 4;
+      @include xs-media {
+        margin: 0px auto 0px;
+        font-size: $font-page - 3;
+      }
+    }
+    .sign-in-by {
+      border-top: 1px solid #999;
+      margin-top: 20px;
+      padding: 20px 0px;
+      label {
+        margin-left: 20px;
+        font-size: $font-page + 2;
+      }
+      .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        //
+        i {
+          border: 1px solid #fff;
+          padding: 10px;
+          text-align: center;
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+          line-height: 20px;
+          margin-left: 20px;
+          cursor: pointer;
+          @include borderRadius(50%);
+          @include transition(0.5s);
+          @include hover {
+            background-color: #fff;
+            color: #3498db;
+            border: 1px solid #3498db;
+          }
+        }
+      }
+    }
+    @include xs-media {
+      padding: 20px 10px;
+      width: 50%;
+      .form-img {
+        display: none;
+      }
+      label {
+        font-weight: bold;
+        font-size: $font-page;
+      }
+      ::-webkit-input-placeholder {
+        /* Edge */
+        color: #fff;
+        font-size: $font-page - 3;
+        line-height: 40px;
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer */
+        color: #fff;
+        font-size: $font-page - 3;
+        line-height: 40px;
+      }
+
+      ::-moz-placeholder {
+        color: #fff;
+        font-size: $font-page - 3;
+        line-height: 40px;
+      }
+
+      ::-ms-input-placeholder {
+        color: #fff;
+        font-size: $font-page - 3;
+        line-height: 40px;
+      }
+
+      ::placeholder {
+        color: #fff;
+        font-size: $font-page - 3;
+        line-height: 40px;
+      }
+      .sign-in-by {
+        label {
+          display: block;
+          font-size: $font-page;
+          margin-bottom: 20px;
+        }
+        i {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+// form 2
+.parent-form-2 {
+  .h1 {
+    text-align: center;
+  }
+  .submit {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 10px 30px;
+    margin: 30px auto;
+    @include flexCenter;
+  }
+}
+// back-face
+/*
+<div class="parent-back-face">
+      <div class="box">
+        <div class="face front">
+          <img src="https://placeimg.com/200/200/any" alt="" />
+        </div>
+        <div class="face back">
+          <p>Lorem ipsum dolor sit amet consectetur</p>
+        </div>
+      </div>
+    </div>
+*/
+.parent-back-face {
+  perspective: 600px;
+  .box {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transform-origin: right center;
+    @include hover {
+      transform: translateX(-100%) rotateY(-180deg);
+    }
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: $font-page;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .front {
+      background-color: red;
+    }
+    .back {
+      transform: rotateY(180deg);
+      color: #000;
+    }
+  }
+}
+.center-position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// grid
+.css-parent-grid {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  //  الاعمدة بى العرض من العنصر اللى هو فية
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // عدد الاعمدة فى الطول من العنصر اللى هو فية
+  // grid-template-rows: repeat(3, 1fr);
+  // اللى هو المارجان بين العناصر
+  gap: 10px 1%;
+  // grid-column: 4 / 6;
+  // grid-column-start: span 3;
+  // grid-column-end: span 3;
+  /*
+  justify-content: space-between;
+  align-content: space-between;
+  */
+  // grid-template-areas: "logo logo navb navb navb navb navb navb navb navb";
+  // .logo {
+  //   grid-area: logo;
+  // }
+  // .navb {
+  //   grid-area: navb;
+  // }
+  .css-child-grid {
+    // grid-column: 1 / 6;
+    // grid-column: span 6;
+    // grid-column: 2 / span 6;
+    // grid-row: 2 / span 5;
+  }
+}
+
+// navbar
+.css-back-transparent {
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+.css-back-transparent.css-scroll-back-color {
+  background-color: #fff;
+}
+
+// rotating-box
+/*
+<div class="parent-rotating-box">
+            <div class="single-rd">
+              <div class="front-side">
+                <img src="images/440x440/image-5.jpg" alt="" />
+              </div>
+              <div class="back-side">
+                <img src="images/440x440/image-2.jpg" alt="" />
+              </div>
+              <div class="left-side">
+                <img src="images/440x440/image-3.jpg" alt="" />
+              </div>
+              <div class="right-side">
+                <img src="images/440x440/image-4.jpg" alt="" />
+              </div>
+              <div class="top-side"></div>
+              <div class="bottom-side"></div>
+            </div>
+          </div>
+*/
+.parent-rotating-box {
+  margin: auto;
+  perspective: 800px;
+  position: relative;
+  width: 50%;
+  height: 250px;
+  .single-rd {
+    width: 100%;
+    -webkit-animation: rotate 15s linear infinite;
+    animation: rotate 15s linear infinite;
+    transform-style: preserve-3d;
+    margin-top: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    div {
+      position: absolute;
+      width: 100%;
+      height: 250px;
+    }
+    .front-side {
+      transform: translateZ(-55px);
+      -webkit-transform: translateZ(-55px);
+      -moz-transform: translateZ(-55px);
+      -ms-transform: translateZ(-55px);
+      -o-transform: translateZ(-55px);
+    }
+
+    .back-side {
+      transform: rotateY(180deg) translateZ(200px);
+      -webkit-transform: rotateY(180deg) translateZ(200px);
+      -moz-transform: rotateY(180deg) translateZ(200px);
+      -ms-transform: rotateY(180deg) translateZ(200px);
+      -o-transform: rotateY(180deg) translateZ(200px);
+    }
+
+    .left-side {
+      transform: rotateY(-90deg) translateX(-200px);
+      -webkit-transform: rotateY(-90deg) translateX(-200px);
+      -moz-transform: rotateY(-90deg) translateX(-200px);
+      -ms-transform: rotateY(-90deg) translateX(-200px);
+      -o-transform: rotateY(-90deg) translateX(-200px);
+      transform-origin: left;
+    }
+    .right-side {
+      transform: rotateY(90deg) translateX(200px);
+      -webkit-transform: rotateY(90deg) translateX(200px);
+      -moz-transform: rotateY(90deg) translateX(200px);
+      -ms-transform: rotateY(90deg) translateX(200px);
+      -o-transform: rotateY(90deg) translateX(200px);
+      transform-origin: right;
+    }
+    .top-side {
+      transform: rotateX(-90deg) translateY(-200px);
+      -webkit-transform: rotateX(-90deg) translateY(-200px);
+      -moz-transform: rotateX(-90deg) translateY(-200px);
+      -ms-transform: rotateX(-90deg) translateY(-200px);
+      -o-transform: rotateX(-90deg) translateY(-200px);
+      transform-origin: top;
+    }
+    .bottom-side {
+      transform: rotateX(90deg) translateY(200px);
+      -webkit-transform: rotateX(90deg) translateY(200px);
+      -moz-transform: rotateX(90deg) translateY(200px);
+      -ms-transform: rotateX(90deg) translateY(200px);
+      -o-transform: rotateX(90deg) translateY(200px);
+      transform-origin: bottom;
+    }
+  }
+  @-webkit-keyframes rotate {
+    0% {
+      @include rotateY(0deg);
+    }
+    100% {
+      @include rotateY(360deg);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      @include rotateY(0deg);
+    }
+    100% {
+      @include rotateY(360deg);
+    }
+  }
+}
+
+// css-parent-overlay-box-3
+/*
+<!-- Start overlay-box-3 -->
+          <div class="css-parent-overlay-box-3">
+            <img
+              src="images/440x440/image-1.jpg"
+              alt=""
+              class="img-fluid img-thumbnail"
+            />
+            <div class="img-text">
+              <h2 class="h1">Lorem ipsum</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                ex incidunt magnam officia aperiam nulla.
+              </p>
+              <a href="#" class="link">learn more</a>
+            </div>
+          </div>
+          <!-- End overlay-box-3 -->
+*/
+.css-parent-overlay-box-3 {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 250px;
+  }
+  .img-text {
+    text-align: center;
+    width: 100%;
+    height: 250px;
+    background-color: tomato;
+    position: absolute;
+    top: -100%;
+    left: 0%;
+    padding: 15px 0px;
+    font-family: poppins;
+    @include opacity(0);
+    color: #fff;
+    @include rotate(90deg);
+    @include transition(0.5s);
+    .h1 {
+      margin: 0;
+    }
+    .lead {
+      padding: 0px 15%;
+      line-height: 1.3;
+      font-size: $font-page + 2;
+    }
+    .link {
+      display: inline-block;
+      color: tomato;
+      text-decoration: none;
+      background-color: #fff;
+      padding: 15px 30px;
+      margin-top: 10px;
+      text-transform: capitalize;
+      font-weight: bold;
+      border: 2px solid tomato;
+      @include borderRadius(5px);
+    }
+  }
+  &:hover .img-text {
+    left: 0;
+    top: 0;
+    @include rotate(0deg);
+    @include opacity(1);
+  }
+}
+
+// css-parent-box-border-fide
+/*
+<!-- Start box-border-fide -->
+<div class="css-parent-box-border-fide">
+  <div class="css-child-box-border-fide">hossam</div>
+</div>
+<!-- End box-border-fide -->
+*/
+.css-parent-box-border-fide {
+  width: 100%;
+  .css-child-box-border-fide {
+    width: 100%;
+    height: auto;
+    @include prefix(box-shadow, 10px 10px 10px #ccc, webkit moz o ms);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+    //
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin: 0;
+      font-size: $font-sm + 5;
+      text-transform: capitalize;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 100%;
+      border-left: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      box-sizing: border-box;
+      @include prefix(transform, translateX(100%), webkit moz o ms);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 100%;
+      border-top: 4px solid transparent;
+      border-right: 4px solid transparent;
+      box-sizing: border-box;
+      @include prefix(transform, translateX(-100%), webkit moz o ms);
+    }
+    &:hover::before {
+      border-color: #3498db;
+      height: 100%;
+      @include prefix(transform, translateX(0), webkit moz o ms);
+      transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -webkit-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -moz-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -ms-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -o-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+    }
+    &:hover::after {
+      border-color: #3498db;
+      height: 100%;
+      @include prefix(transform, translateX(0), webkit moz o ms);
+      transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -webkit-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -moz-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -ms-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+      -o-transition: 0.3s transform linear, 0.3s height linear 0.3s;
+    }
+  }
+}
+
+// css-parent-slider-gallery-2
+/*
+<!-- Start slider-gallery-2 -->
+<div class="css-parent-slider-gallery-2">
+  <ul class="img-wrapper">
+    <li>
+      <img
+        src="images/440x440/image-1.jpg"
+        alt=""
+        class="img-fluid img-thumbnail"
+      />
+    </li>
+    <li>
+      <img
+        src="images/440x440/image-2.jpg"
+        alt=""
+        class="img-fluid img-thumbnail"
+      />
+    </li>
+    <li>
+      <img
+        src="images/440x440/image-3.jpg"
+        alt=""
+        class="img-fluid img-thumbnail"
+      />
+    </li>
+  </ul>
+</div>
+<!-- End slider-gallery-2 -->
+*/
+.css-parent-slider-gallery-2 {
+  width: 600px;
+  margin: 0 auto;
+  height: 100vh;
+  ul.img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0;
+    li {
+      width: 70px;
+      overflow: hidden;
+      transition: all 1.5s;
+      -webkit-transition: all 1.5s;
+      -moz-transition: all 1.5s;
+      -ms-transition: all 1.5s;
+      -o-transition: all 1.5s;
+      // display: inline-block;
+      margin-left: 0;
+      margin-right: 0;
+      //
+      img {
+        width: 450px;
+        border: 5px solid #f00;
+        height: 100%;
+      }
+      &:hover {
+        width: 700px;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+      }
+      &:nth-child(3) {
+        width: 500px;
+      }
+      &:nth-child(3) :hover {
+        width: 500px;
+      }
+    }
+
+    &:hover li:nth-child(3) {
+      width: 70px;
+    }
+  }
+}
+
+// parent-box-overlay-4
+/*
+<!-- Start box-overlay-4 -->
+          <div class="parent-box-overlay-3">
+            <div class="main-content">
+              <div class="single-img">
+                <img
+                  src="images/440x440/image-1.jpg"
+                  alt=""
+                  class="img-fluid img-thumbnail"
+                />
+              </div>
+              <div class="overlay">
+                <h4>see more</h4>
+                <p>price - $15</p>
+              </div>
+            </div>
+          </div>
+          <!-- End box-overlay-3 -->
+*/
+.parent-box-overlay-4 {
+  @include flexCenter;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  .main-content {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .single-img {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        @include prefix(transition, 0.9s, webkit moz o ms);
+      }
+    }
+    .overlay {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      @include translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      h4,
+      p {
+        position: absolute;
+        background-color: #3498db;
+        color: #fff;
+        right: 25px;
+        bottom: 40px;
+        padding: 10px 30px;
+        z-index: 2;
+        @include opacity(0);
+        @include prefix(transition, 1s, webkit moz o ms);
+        @include prefix(transform, translateX(-80%), webkit moz o ms);
+        @include borderRadius(10px);
+      }
+      h4 {
+      }
+      p {
+        font-size: 14px;
+        background-color: rgb(77, 77, 77);
+        bottom: -15px;
+        @include prefix(transition, 2s, webkit moz o ms);
+      }
+    }
+    &:hover h4,
+    &:hover p {
+      @include opacity(1);
+      @include prefix(transform, translateX(0%), webkit moz o ms);
+    }
+    &:hover .single-img {
+      @include opacity(0.5);
+    }
+  }
+}
+
+// css-parent-team-back-to-face
+.css-parent-team-back-to-face {
+  .single-team {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: transparent;
+    .img-area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      transform-origin: left;
+      @include transition(1s);
+      perspective: 1000px;
+      @include rotateY(0deg);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .img-text {
+      position: absolute;
+      padding: 25px;
+      width: 100%;
+      height: 250px;
+      transform-origin: left;
+      @include rotateY(90deg);
+      text-align: center;
+      box-sizing: border-box;
+      @include transition(1s);
+    }
+    &:hover .img-area {
+      perspective: 600px;
+      @include rotateY(-90deg);
+    }
+    &:hover .img-text {
+      @include rotateY(0deg);
+      perspective: 600px;
+    }
+  }
+}
