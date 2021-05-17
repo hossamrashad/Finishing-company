@@ -154,13 +154,13 @@ $(document).ready(function () {
 
 // mixitup
 
-// $(document).ready(function () {
+$(document).ready(function () {
 
-//   "use strict";
+  "use strict";
 
-//   var mixer = mixitup(".box-list");
+  var mixer = mixitup(".box-list");
 
-// });
+});
 
 // gmaps
 // var map = new GMaps({ el: ".jq-map", lat: 29.993663, lng: 31.222816 });

@@ -41,46 +41,104 @@
   }
 }
 
+// add parent have class home-page-slider
 .home-page-slider {
   // All Img
   img {
     background-size: cover;
   }
-  .bd-exampl {
-    border: 20px solid #333;
-
-    .carousel.slide {
-      // ol
-      .carousel-indicators {
-        // li
-        li {
+  #carouselExampleCaptions {
+    // ol
+    .carousel-indicators {
+      bottom: 100px;
+      // li
+      li.active {
+      }
+      li {
+        height: 6px;
+      }
+    }
+    // div carousel-inner
+    .carousel-inner {
+      // div carousel-item active
+      .carousel-item.active {
+        // img
+        img {
+        }
+        // div
+        > div {
+          background-color: rgba(14, 197, 253, 0.514);
+          padding: 50px;
+          @include positionCenter;
         }
       }
-      // div carousel-inner
-      .carousel-inner {
-        // div carousel-item active
-        .carousel-item.active {
-          // img
-          .d-block.w-100 {
-          }
-          // div center-position carousel-caption d-none d-md-block
-          .center-position.carousel-caption.d-none.d-md-block {
-            background-color: rgba(51, 51, 51, 0.404);
-            padding: 50px;
-          }
+      // div carousel-item
+      .carousel-item {
+        // img
+        img {
         }
-        // div carousel-item active
-        .carousel-item {
-          // img
-          .d-block.w-100 {
-          }
-          // div center-position carousel-caption d-none d-md-block
-          .center-position.carousel-caption.d-none.d-md-block {
-            background-color: rgba(51, 51, 51, 0.404);
-            padding: 50px;
-          }
+        // div center-position carousel-caption d-none d-md-block
+        > div {
+          background-color: rgba(51, 51, 51, 0.801);
+          padding: 50px;
+          @include positionCenter;
+          @include transitionAll(all, 0.5s, linear);
+          height: max-content;
         }
       }
     }
+    // a
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: #333 !important;
+      height: 100px;
+      width: 50px;
+      top: calc(50% - 50px);
+      @include borderRadius(10%);
+      // span
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+      }
+      .sr-only {
+      }
+    }
   }
+}
+
+.about-us {
+  margin: 120px 0px;
+}
+
+// parent video
+.parent-video {
+  text-align: center;
+  .text-video {
+    @include positionCenter;
+    background-color: rgba(51, 51, 51, 0.322);
+    p {
+      color: #fff;
+      font-size: 40px;
+      margin: 30px 0px;
+      padding: 0px 20px;
+    }
+    .h4 {
+      color: #fff;
+      padding: 30px 0px;
+    }
+  }
+}
+
+// bottom-video
+.bottom-video {
+  background-image: url(../../../images/back-video.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+}
+// services
+.services {
+  padding: 120px 0px;
 }
