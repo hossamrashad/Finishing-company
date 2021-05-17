@@ -5338,10 +5338,9 @@ class="css-parent-backward"
 .css-menu-hover-1 ul li a {
   position: relative;
   display: block;
-  color: #fff;
-  font-family: poppins;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .css-menu-hover-1 ul li a span {
@@ -5355,7 +5354,7 @@ class="css-parent-backward"
   position: absolute;
   top: 0;
   left: 0;
-  background-color: tomato;
+  background-color: #3498db;
   color: #fff;
   padding: 10px 0px;
   -webkit-transform-style: preserve-3d;
@@ -5470,63 +5469,21 @@ class="css-parent-backward"
   }
 }
 
-.test-btn {
-  margin: 100px auto;
-  width: 200px;
-  border-width: 10px;
-  padding: 20px;
-  text-align: center;
-  height: 120px;
-  font-size: 40px;
-  border-top-left-radius: 5px;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-top-left-radius: 5px;
-  -o-border-top-left-radius: 5px;
-  -ms-border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-top-right-radius: 5px;
-  -o-border-top-right-radius: 5px;
-  -ms-border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-bottom-left-radius: 5px;
-  -o-border-bottom-left-radius: 5px;
-  -ms-border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-bottom-right-radius: 5px;
-  -o-border-bottom-right-radius: 5px;
-  -ms-border-bottom-right-radius: 5px;
-  border-top-color: #e8ae1a;
-  border-right-color: #76cd9c;
-  border-bottom-color: #a60b55;
-  border-left-color: #333;
-  transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
-  transition: all 1.5s linear;
-  -webkit-transition: all 1.5s linear;
-  -moz-transition: all 1.5s linear;
-  -ms-transition: all 1.5s linear;
-  -o-transition: all 1.5s linear;
+.home-page-slider img {
+  background-size: cover;
 }
 
-.test-btn:not([disabled]):hover {
-  transform: scaleY(1.5);
-  -webkit-transform: scaleY(1.5);
-  -moz-transform: scaleY(1.5);
-  -ms-transform: scaleY(1.5);
-  -o-transform: scaleY(1.5);
-  padding: 0px;
-  font-size: 20px;
-  border-width: 20px;
-  height: 70px;
+.home-page-slider .bd-exampl {
+  border: 20px solid #333;
+}
+
+.home-page-slider .bd-exampl .carousel.slide .carousel-inner .carousel-item.active .center-position.carousel-caption.d-none.d-md-block {
+  background-color: rgba(51, 51, 51, 0.404);
+  padding: 50px;
+}
+
+.home-page-slider .bd-exampl .carousel.slide .carousel-inner .carousel-item .center-position.carousel-caption.d-none.d-md-block {
+  background-color: rgba(51, 51, 51, 0.404);
+  padding: 50px;
 }
 /*# sourceMappingURL=framework.css.map */

@@ -81,13 +81,12 @@
       a {
         position: relative;
         display: block;
-        color: #fff;
+        // color: #fff !important;
         // font-size: 18px;
-        font-family: poppins;
+        // font-family: poppins;
         text-transform: uppercase;
         text-decoration: none;
-        // font-weight: bold;
-        // background-color: #1abc9c;
+        font-weight: bold;
         span {
           display: block;
           // padding: 15px 30px;
@@ -98,7 +97,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: tomato;
+            background-color: #3498db;
             color: #fff;
             padding: 10px 0px;
             transform-style: preserve-3d;
