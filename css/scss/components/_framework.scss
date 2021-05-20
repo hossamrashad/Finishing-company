@@ -182,8 +182,8 @@
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    width: 400px;
-    height: 480px;
+    width: max-content;
+    min-height: 400px;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 50px 30px;

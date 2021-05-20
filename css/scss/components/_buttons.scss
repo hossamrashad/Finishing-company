@@ -843,7 +843,7 @@ class="css-parent-backward"
     position: absolute;
     left: 50%;
     bottom: 25px;
-    border: 1px solid map-get($colors, 3498db);
+    border: 3px solid map-get($colors, fff);
     height: 50px;
     width: 30px;
     margin-left: -17px;
@@ -853,7 +853,7 @@ class="css-parent-backward"
     .wheel {
       position: relative;
       @include borderRadius(10px);
-      background-color: map-get($colors, 333);
+      background-color: map-get($colors, fff);
       width: 4px;
       height: 10px;
       margin-left: auto;
