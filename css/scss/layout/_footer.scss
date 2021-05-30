@@ -1,13 +1,97 @@
 // footer
 .footer {
   margin-top: $main-margin;
-  margin-bottom: $main-margin;
+  background-color: $footer-back;
+  color: #fff;
+  // margin-bottom: $main-margin;
+  position: relative;
+  .footer-box-one {
+    @include transitionAll(all, 0.5s, linear);
+    .img-area {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px solid transparent;
+      background-color: #fff;
+      @include borderRadius(5px);
+      @include transitionAll(all, 0.5s, linear);
+      img {
+        @include scale(1.5, 1.5);
+      }
+    }
+  }
+  .footer-box-tow {
+    color: #fff;
+    padding: $main-padding-box;
+    text-align: center;
+
+    @include borderRadius(5px);
+    @include xs-media {
+    }
+
+    @include sm-media {
+      padding-top: $main-padding;
+    }
+
+    @include md-media {
+    }
+
+    @include lg-media {
+    }
+    .title {
+      margin-bottom: $main-margin-text;
+      font-size: $font-md;
+    }
+    .css-li-border-bottom {
+      background-color: transparent;
+      li {
+        margin-right: 0;
+        display: block;
+
+        padding-bottom: $main-padding-box - 15;
+        a {
+          color: #fff;
+          &::after{background-color: #fff;}
+        }
+      }
+    }
+  }
+  .footer-box-form {
+    @include xs-media {
+    }
+
+    @include sm-media {
+      padding-top: $main-padding + 10;
+    }
+
+    @include md-media {
+    }
+
+    @include lg-media {
+    }
+    h3 {
+      color: #fff;
+      margin-bottom: $main-margin-text;
+    }
+    .call-us {
+      margin-top: $main-margin-text;
+      background-color: $main-color;
+      margin-bottom: $main-margin-text;
+      display: block;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fff;
+      i {
+        padding-right: 20px;
+      }
+    }
+  }
 }
 
 .copyright {
-  margin: 20px 0px 0px;
+  margin:  0px;
   padding: 60px 0px;
-  background-color: map-get($colors, 333);
+  background-color: #161719;
   color: map-get($colors, fff);
   text-align: center;
   .lead,

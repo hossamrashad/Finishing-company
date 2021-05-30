@@ -26,7 +26,7 @@ $(document).ready(function () {
   "use strict";
   // wow
 
-  // new WOW().init();
+   new WOW().init();
 
   // nice scroll
   $(function () {

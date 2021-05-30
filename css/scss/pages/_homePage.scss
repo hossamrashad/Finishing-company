@@ -222,6 +222,14 @@
 
     .services-box {
       @include transitionAll(all, 0.5s, linear);
+      .img {
+        height: 387px;
+        display: block;
+        img {
+          height: 100%;
+          background-size: cover;
+        }
+      }
       @include hover {
         box-shadow: 0 25px 45px #00000080;
         img {
@@ -288,16 +296,16 @@
       @include borderRadius(10px);
       @include transitionAll(all, 0.5s, linear);
       @include hover {
-      border: 2px solid $main-color;
-      @include borderRadius(0px);
-
+        border: 2px solid $main-color;
+        @include borderRadius(0px);
       }
       .img {
         overflow: hidden;
         height: 300px;
         img {
           background-size: cover;
-          width: 100%;height: 100%;
+          width: 100%;
+          height: 100%;
         }
       }
       .disc {
@@ -317,8 +325,6 @@
   padding-top: $main-padding - 40;
 }
 
-
-
 // bottom-video
 .bottom-video {
   background-image: url(../images/back-video.png);
@@ -329,10 +335,319 @@
   height: 300px;
 }
 
-
 // projects
 .projects {
   .projects-text {
     height: 70px;
   }
 }
+
+// Page About
+.main-page-about {
+  .slider {
+    background-image: url(../../../images/page-about/slider/1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: calc(100vh / 2);
+    position: relative;
+    .h1 {
+      @include positionCenter;
+      @include flexCenter;
+      font-size: $font-lg;
+      font-weight: bold;
+      color: $main-color;
+    }
+  }
+  .parent-disc {
+    margin-top: $main-margin + 50;
+    height: fit-content;
+    .img-area {
+      height: 618px;
+      width: 100%;
+      display: block;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .search {
+    margin-top: $main-margin;
+
+    background-image: url(../../../images/page-about/2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    .icon {
+      color: #fff;
+      @include transitionAll(all, 0.5s, linear);
+      @include hover {
+        color: $main-color;
+        @include scale(1.1, 1.1);
+      }
+    }
+    .disc {
+      min-height: 200px;
+      .h3 {
+        color: #fff;
+        height: 80px;
+      }
+      .lead {
+        color: #fff;
+      }
+    }
+  }
+  .principles {
+    margin-top: $main-margin;
+    padding-top: $main-padding;
+    .disc {
+    }
+    .img-area {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// page designs
+
+.main-page-designs {
+  margin-top: $main-margin;
+  .text-one {
+    .title {
+      font-size: 5vw;
+      padding-top: 15%;
+      height: 332px;
+    }
+  }
+  .img-area {
+    margin-top: $main-margin;
+    height: 427px;
+    width: 100%;
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .text-after-img {
+    margin-top: $main-margin-text + 30;
+  }
+}
+.parent-item {
+  background-color: $main-back;
+  margin-top: $main-margin;
+  padding-top: $main-padding;
+  .item {
+    margin-bottom: $main-margin-text;
+    i {
+      color: $main-color;
+    }
+  }
+}
+.Holiday-services {
+  margin-top: $main-margin;
+  .header {
+  }
+  .hr {
+    background-color: $main-color;
+    height: 3px;
+    width: 40%;
+    margin: auto;
+  }
+  .lead {
+  }
+}
+
+.Success-one {
+  padding-left: $main-padding-box + 50;
+  background-color: $page-design;
+  height: 100vh;
+  position: relative;
+  > div {
+    @include positionCenter;
+  }
+
+  .img-area {
+    display: block;
+    width: 100%;
+    height: 600px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .disc {
+    background-color: #fff;
+    min-height: 600px;
+    position: relative;
+    margin-left: 100px;
+    .disc-chiLd {
+      padding-left: $main-padding-box;
+      padding-right: $main-padding-box;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: -10%;
+      left: -5%;
+      height: 120%;
+      border: 20px solid $main-color;
+      z-index: -1;
+      @include borderRadius(10px);
+    }
+  }
+  .col-my-left-7,
+  .col-my-left-5 {
+    padding: 0;
+    @include xs-media {
+      width: 100%;
+      float: none;
+    }
+  }
+  .col-my-left-7 {
+    @include xs-media {
+      .disc {
+        position: relative;
+        margin-left: 0;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        -webkit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+        &::before {
+          display: none;
+        }
+        .disc-chiLd {
+          margin-top: $main-margin;
+          padding-top: $main-padding;
+          position: relative;
+          top: 0%;
+          transform: translateY(0%);
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+        }
+        .lead {
+          display: none;
+        }
+      }
+    }
+  }
+  .col-my-left-5 {
+    @include xs-media {
+    }
+  }
+}
+
+// 
+.Success-tow {
+  margin-top: $main-margin +50;
+  padding-left: $main-padding-box + 50;
+  background-color: $page-design;
+  height: 100vh;
+  position: relative;
+  > div {
+    @include positionCenter;
+  }
+
+  .img-area {
+    display: block;
+    width: 100%;
+    height: 600px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .disc {
+    background-color: #fff;
+    min-height: 600px;
+    position: relative;
+    margin-right: 100px;
+    .disc-chiLd {
+      padding-left: $main-padding-box;
+      padding-right: $main-padding-box;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: -10%;
+      right: -5%;
+      height: 120%;
+      border: 20px solid $main-color;
+      z-index: -1;
+      @include borderRadius(10px);
+    }
+  }
+  .col-my-left-7,
+  .col-my-left-5 {
+    padding: 0;
+    @include xs-media {
+      width: 100%;
+      float: none;
+    }
+  }
+  .col-my-left-7 {
+    @include xs-media {
+      .disc {
+        position: relative;
+        margin-left: 0;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        -webkit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+        &::before {
+          display: none;
+        }
+        .disc-chiLd {
+          margin-top: $main-margin;
+          padding-top: $main-padding;
+          position: relative;
+          top: 0%;
+          transform: translateY(0%);
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+        }
+        .lead {
+          display: none;
+        }
+      }
+    }
+  }
+  .col-my-left-5 {
+    @include xs-media {
+    }
+  }
+}
+
+// our-work
+
+.our-work{margin-top: $main-margin}
