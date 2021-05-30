@@ -6215,6 +6215,32 @@ class="css-parent-backward"
   margin-top: 100px;
 }
 
+.our-work .our-work-box-tow,
+.our-work .our-work-box-three {
+  margin-top: 100px;
+}
+
+.our-work .text-know {
+  background-color: #F8F8F8;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+.our-work .text-know .call-us {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 40px;
+  background-color: #108FA0;
+  color: #fff;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding: 10px 20px;
+}
+
 .footer {
   margin-top: 100px;
   background-color: #1E2024;

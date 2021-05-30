@@ -555,9 +555,9 @@
   }
 }
 
-// 
+//
 .Success-tow {
-  margin-top: $main-margin +50;
+  margin-top: $main-margin + 50;
   padding-left: $main-padding-box + 50;
   background-color: $page-design;
   height: 100vh;
@@ -650,4 +650,27 @@
 
 // our-work
 
-.our-work{margin-top: $main-margin}
+.our-work {
+  margin-top: $main-margin;
+  .our-work-box-tow,
+  .our-work-box-three {
+    margin-top: $main-margin;
+  }
+  .text-know {
+    background-color: $main-back;
+    padding-top: $main-padding;
+    padding-bottom: $main-padding;
+    margin-top: $main-margin;
+    .call-us {
+      width: fit-content;
+      margin-top: $main-margin-text;
+      background-color: $main-color;
+      color: #fff;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      padding: 10px 20px ;
+    }
+  }
+}
