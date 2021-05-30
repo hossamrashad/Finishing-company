@@ -1,3 +1,8 @@
+// class
+.font-bold {
+  font-weight: bold;
+}
+.line-h-18{line-height: 1.8;}
 // border test
 %border-test {
   border: 5px solid #333;
@@ -11,7 +16,6 @@
     &:hover {
       @include scale(1.3, 1.3);
     }
-    
   }
 }
 // End hoverZoomLink
@@ -169,7 +173,7 @@
   font-family: $font-cairo;
   height: 100vh;
   width: 100%;
-  background-image: url("https://placeimg.com/1000/1000/tech");
+  background-image: url("../../../images/footer/footer.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

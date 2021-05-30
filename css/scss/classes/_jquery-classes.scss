@@ -184,21 +184,29 @@
     text-align: center;
     ul {
       li {
+        width: fit-content;
         font-weight: bold;
         text-transform: uppercase;
-        @include borderRadius(5px);
         cursor: pointer;
-        margin-bottom: 60px;
-        background: map-get($colors, 3498db);
-        font-size: 18px;
-        padding: 10px 30px;
+        margin-bottom: 50px;
+        margin-right: 10px;
+        background: $main-color;
+        padding: 10px 20px;
         color: #fff;
+        border: 1px solid transparent;
+
         @include transitionAll(all, 0.4s, linear);
+        @include borderRadius(5px);
+
+        @include xs-media{
+          margin-bottom: 10px;
+        }
+        
       }
       .mixitup-control-active {
-        border: 3px solid map-get($colors, 3498db);
+        border: 1px solid $main-color;
         background: transparent;
-        color: map-get($colors, 3498db);;
+        color:$main-color;
       }
     }
   }

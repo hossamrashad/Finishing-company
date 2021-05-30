@@ -93,13 +93,15 @@
           width: 100%;
           height: 100%;
           &::before {
+            padding: 10px 5px;
+            width: fit-content;
+            height: 100%;
             content: attr(title);
             position: absolute;
             top: 0;
             left: 0;
             background-color: #3498db;
             color: #fff;
-            padding: 10px 0px;
             transform-style: preserve-3d;
             @include transition(0.4s);
             transform: rotateX(90deg) translateY(150px);
@@ -108,24 +110,27 @@
             -ms-transform: rotateX(90deg) translateY(150px);
             -o-transform: rotateX(90deg) translateY(150px);
             transform-origin: bottom;
-            width: 100%;
-            height: 100%;
-
+            @include borderRadius(5px);
             @include xs-media {
-              width: 18%;
+              width: fit-content;
               direction: rtl;
               right: 0;
               text-align: center;
             }
             @include sm-media {
-              width: 15%;
+              width: fit-content;
               direction: rtl;
               right: 0;
               text-align: center;
             }
             @include md-media {
-              width: 100%;
+              width: fit-content;
               text-align: center;
+              direction: rtl;
+              right: 0;
+            }
+            @include lg-media {
+              padding: 10px 0 !important;
             }
           }
           &:hover::before {
