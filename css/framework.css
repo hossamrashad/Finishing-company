@@ -6288,6 +6288,16 @@ class="css-parent-backward"
   line-height: 1.5;
 }
 
+.page-contact-form {
+  margin-top: 100px;
+}
+
+.page-contact-form .address i {
+  color: #108FA0;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 .footer {
   margin-top: 100px;
   background-color: #1E2024;

@@ -715,3 +715,16 @@
     }
   }
 }
+
+// page-contact-form
+
+.page-contact-form {
+  margin-top: $main-margin;
+  .address {
+    i {
+      color: $main-color;
+      font-size: $font-sm;
+      margin-top: 10px;
+    }
+  }
+}
