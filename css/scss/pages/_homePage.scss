@@ -728,3 +728,32 @@
     }
   }
 }
+
+// page-our-work
+
+.page-our-work {
+  .slider {
+    background-image: url(../images/page-our-work/1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: calc(100vh / 2);
+    position: relative;
+    .header-text {
+      @include positionCenter;
+      .h1 {
+        font-size: $font-lg;
+        font-weight: bold;
+        color: $main-color;
+      }
+    }
+  }
+  .parent-main {
+    margin-top: $main-margin;
+    padding-top: $main-padding;
+    padding-bottom: $main-padding;
+    background-image: url(../images/page-our-work/500.png);
+    .child-main{margin-bottom: $main-margin;}
+  }
+}

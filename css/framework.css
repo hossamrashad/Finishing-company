@@ -3851,16 +3851,16 @@ class="css-parent-backward"
 
 /*
 <div class="jq-snake">
-            <img src="images/440x440/image-1.jpg" alt="" />
-            <div class="overlay">
-              <div class="disc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Quisquam, enim. Et, minus iste repellendus expedita fugit unde
-                debitis rerum assumenda ipsa laborum explicabo, optio eaque
-                voluptatem odio commodi, itaque omnis?
-              </div>
-            </div>
+        <img src="//via.placeholder.com/1000x1000/333" alt="" />
+        <div class="overlay">
+          <div class="disc">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam,
+            enim. Et, minus iste repellendus expedita fugit unde debitis rerum
+            assumenda ipsa laborum explicabo, optio eaque voluptatem odio
+            commodi, itaque omnis?
           </div>
+        </div>
+      </div>
 */
 .jq-snake {
   position: relative;
@@ -6296,6 +6296,44 @@ class="css-parent-backward"
   color: #108FA0;
   font-size: 20px;
   margin-top: 10px;
+}
+
+.page-our-work .slider {
+  background-image: url(../images/page-our-work/1.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: calc(100vh / 2);
+  position: relative;
+}
+
+.page-our-work .slider .header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.page-our-work .slider .header-text .h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #108FA0;
+}
+
+.page-our-work .parent-main {
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../images/page-our-work/500.png);
+}
+
+.page-our-work .parent-main .child-main {
+  margin-bottom: 100px;
 }
 
 .footer {
