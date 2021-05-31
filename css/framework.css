@@ -3885,6 +3885,8 @@ class="css-parent-backward"
 }
 
 .jq-snake .overlay .disc {
+  padding-left: 30px;
+  padding-right: 30px;
   position: absolute;
   color: #fff;
   width: 100%;
@@ -5364,6 +5366,7 @@ class="css-parent-backward"
 .css-menu-hover-1 ul li a span {
   display: block;
   width: 100%;
+  font-weight: bold;
   height: 100%;
 }
 
@@ -5430,12 +5433,6 @@ class="css-parent-backward"
     text-align: center;
     direction: rtl;
     right: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .css-menu-hover-1 ul li a span::before {
-    padding: 10px 0 !important;
   }
 }
 

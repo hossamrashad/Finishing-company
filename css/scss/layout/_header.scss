@@ -91,6 +91,7 @@
           display: block;
           // padding: 15px 30px;
           width: 100%;
+          font-weight: bold;
           height: 100%;
           &::before {
             padding: 10px 5px;
@@ -130,7 +131,7 @@
               right: 0;
             }
             @include lg-media {
-              padding: 10px 0 !important;
+              // padding: 10px 0 !important;
             }
           }
           &:hover::before {

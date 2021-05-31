@@ -86,6 +86,8 @@
     text-align: center;
 
     .disc {
+      padding-left: 30px;
+      padding-right: 30px;
       position: absolute;
       color: #fff;
       width: 100%;
@@ -198,15 +200,14 @@
         @include transitionAll(all, 0.4s, linear);
         @include borderRadius(5px);
 
-        @include xs-media{
+        @include xs-media {
           margin-bottom: 10px;
         }
-        
       }
       .mixitup-control-active {
         border: 1px solid $main-color;
         background: transparent;
-        color:$main-color;
+        color: $main-color;
       }
     }
   }
