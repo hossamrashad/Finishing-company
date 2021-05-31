@@ -670,7 +670,48 @@
       margin-right: auto;
       margin-left: auto;
       display: block;
-      padding: 10px 20px ;
+      padding: 10px 20px;
+    }
+  }
+}
+
+// page-blog
+.page-blog {
+  background-color: $main-back;
+  padding-top: $main-padding;
+  .blog-one {
+    margin-top: $main-margin;
+    .css-parent-backward {
+      .css-backward-show {
+        height: 500px;
+        .img-area {
+          height: 300px;
+          width: 100%;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .lead {
+        }
+      }
+      .css-backward-hide {
+        height: 500px;
+        @include boxShadow(-1px, 0px, 10px, #000);
+        .img-area {
+          height: 300px;
+          width: 100%;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        p {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          line-height: 1.5;
+        }
+      }
     }
   }
 }

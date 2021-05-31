@@ -6241,10 +6241,59 @@ class="css-parent-backward"
   padding: 10px 20px;
 }
 
+.page-blog {
+  background-color: #F8F8F8;
+  padding-top: 100px;
+}
+
+.page-blog .blog-one {
+  margin-top: 100px;
+}
+
+.page-blog .blog-one .css-parent-backward .css-backward-show {
+  height: 500px;
+}
+
+.page-blog .blog-one .css-parent-backward .css-backward-show .img-area {
+  height: 300px;
+  width: 100%;
+}
+
+.page-blog .blog-one .css-parent-backward .css-backward-show .img-area img {
+  height: 100%;
+  width: 100%;
+}
+
+.page-blog .blog-one .css-parent-backward .css-backward-hide {
+  height: 500px;
+  -o-box-shadow: -1px 0px 10px #000;
+  -ms-box-shadow: -1px 0px 10px #000;
+  -webkit-box-shadow: -1px 0px 10px #000;
+          box-shadow: -1px 0px 10px #000;
+}
+
+.page-blog .blog-one .css-parent-backward .css-backward-hide .img-area {
+  height: 300px;
+  width: 100%;
+}
+
+.page-blog .blog-one .css-parent-backward .css-backward-hide .img-area img {
+  height: 100%;
+  width: 100%;
+}
+
+.page-blog .blog-one .css-parent-backward .css-backward-hide p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+
 .footer {
   margin-top: 100px;
   background-color: #1E2024;
   color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
   position: relative;
 }
 
@@ -6294,7 +6343,7 @@ class="css-parent-backward"
 
 @media (min-width: 768px) {
   .footer .footer-box-tow {
-    padding-top: 100px;
+    padding-top: 100px -50;
   }
 }
 
@@ -6323,7 +6372,7 @@ class="css-parent-backward"
 
 @media (min-width: 768px) {
   .footer .footer-box-form {
-    padding-top: 110px;
+    padding-top: 40px;
   }
 }
 

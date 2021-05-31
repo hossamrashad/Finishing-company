@@ -4,6 +4,8 @@
   background-color: $footer-back;
   color: #fff;
   // margin-bottom: $main-margin;
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
   position: relative;
   .footer-box-one {
     @include transitionAll(all, 0.5s, linear);
@@ -29,7 +31,7 @@
     }
 
     @include sm-media {
-      padding-top: $main-padding;
+      padding-top: $main-padding -50;
     }
 
     @include md-media {
@@ -60,7 +62,7 @@
     }
 
     @include sm-media {
-      padding-top: $main-padding + 10;
+      padding-top: $main-padding - 60 ;
     }
 
     @include md-media {
